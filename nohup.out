@@ -1,0 +1,948 @@
+Failed to open dir (No such file or directory): /run/user/1003/gvfs/
+Processing Categories:   0%|          | 0/55 [00:00<?, ?category/s]
+Processing Models in car:   0%|          | 0/3526 [00:00<?, ?model/s][A
+car:/mnt/hdd/zhengquan/Shapenet/ShapeNetCore.v2/02958343/bf7efe509caf42cb7481cee66aa2b2f4
+
+
+CUDA
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+[13:51:54] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Found 64 GT images, loading directly from /mnt/hdd/zhengquan/Shapenet/gt_shapenet/car/bf7efe509caf42cb7481cee66aa2b2f4
+Loaded 64 GT images successfully!
+
+
+viewpoint:   0%|          | 0/64 [00:00<?, ?it/s][A[Adealing with 0
+[13:51:57] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:   2%|▏         | 1/64 [02:59<3:08:10, 179.21s/it][A[ASelf.trainer.train duration: 137.0361 seconds
+显存占用: 777.52 MB, 已预留显存: 1160.00 MB
+dealing with 1
+[13:54:56] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:   3%|▎         | 2/64 [06:13<3:14:13, 187.96s/it][A[ASelf.trainer.train duration: 142.1425 seconds
+显存占用: 1118.38 MB, 已预留显存: 1468.00 MB
+dealing with 2
+[13:58:10] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:   5%|▍         | 3/64 [09:33<3:16:48, 193.58s/it][A[ASelf.trainer.train duration: 150.1643 seconds
+显存占用: 1460.51 MB, 已预留显存: 1954.00 MB
+dealing with 3
+[14:01:31] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:   6%|▋         | 4/64 [13:09<3:22:33, 202.56s/it][A[ASelf.trainer.train duration: 165.8300 seconds
+显存占用: 1801.93 MB, 已预留显存: 2192.00 MB
+dealing with 4
+[14:05:07] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:   8%|▊         | 5/64 [16:06<3:10:08, 193.36s/it][A[ASelf.trainer.train duration: 133.6242 seconds
+显存占用: 2144.90 MB, 已预留显存: 2576.00 MB
+dealing with 5
+[14:08:04] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:   9%|▉         | 6/64 [18:34<2:51:42, 177.62s/it][A[ASelf.trainer.train duration: 107.1461 seconds
+显存占用: 2486.88 MB, 已预留显存: 2948.00 MB
+dealing with 6
+[14:10:31] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  11%|█         | 7/64 [21:06<2:40:52, 169.35s/it][A[ASelf.trainer.train duration: 110.5201 seconds
+显存占用: 2828.79 MB, 已预留显存: 3208.00 MB
+dealing with 7
+[14:13:03] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  12%|█▎        | 8/64 [24:18<2:44:55, 176.71s/it][A[ASelf.trainer.train duration: 149.1629 seconds
+显存占用: 3171.77 MB, 已预留显存: 3614.00 MB
+dealing with 8
+[14:16:16] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  14%|█▍        | 9/64 [27:53<2:52:47, 188.51s/it][A[ASelf.trainer.train duration: 169.3111 seconds
+显存占用: 3514.02 MB, 已预留显存: 4006.00 MB
+dealing with 9
+[14:19:50] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  16%|█▌        | 10/64 [30:40<2:43:43, 181.91s/it][A[ASelf.trainer.train duration: 117.5786 seconds
+显存占用: 3855.06 MB, 已预留显存: 4294.00 MB
+dealing with 10
+[14:22:37] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  17%|█▋        | 11/64 [33:30<2:37:36, 178.43s/it][A[ASelf.trainer.train duration: 125.0244 seconds
+显存占用: 4196.72 MB, 已预留显存: 4660.00 MB
+dealing with 11
+[14:25:28] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  19%|█▉        | 12/64 [36:08<2:29:08, 172.08s/it][A[ASelf.trainer.train duration: 112.8225 seconds
+显存占用: 4538.83 MB, 已预留显存: 4984.00 MB
+dealing with 12
+[14:28:05] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  20%|██        | 13/64 [38:40<2:21:01, 165.91s/it][A[ASelf.trainer.train duration: 108.7872 seconds
+显存占用: 4879.15 MB, 已预留显存: 5294.00 MB
+dealing with 13
+[14:30:37] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  22%|██▏       | 14/64 [41:09<2:14:08, 160.96s/it][A[ASelf.trainer.train duration: 108.9725 seconds
+显存占用: 5221.34 MB, 已预留显存: 5784.00 MB
+dealing with 14
+[14:33:07] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  23%|██▎       | 15/64 [43:30<2:06:25, 154.80s/it][A[ASelf.trainer.train duration: 98.9156 seconds
+显存占用: 5563.20 MB, 已预留显存: 6098.00 MB
+dealing with 15
+[14:35:27] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  25%|██▌       | 16/64 [46:06<2:04:08, 155.18s/it][A[ASelf.trainer.train duration: 112.6986 seconds
+显存占用: 5906.21 MB, 已预留显存: 6414.00 MB
+dealing with 16
+[14:38:03] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  27%|██▋       | 17/64 [48:58<2:05:33, 160.28s/it][A[ASelf.trainer.train duration: 125.7699 seconds
+显存占用: 6248.30 MB, 已预留显存: 6824.00 MB
+dealing with 17
+[14:40:56] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  28%|██▊       | 18/64 [52:05<2:09:01, 168.29s/it][A[ASelf.trainer.train duration: 141.2308 seconds
+显存占用: 6589.48 MB, 已预留显存: 7160.00 MB
+dealing with 18
+[14:44:02] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  30%|██▉       | 19/64 [55:16<2:11:17, 175.05s/it][A[ASelf.trainer.train duration: 142.9478 seconds
+显存占用: 6930.31 MB, 已预留显存: 7510.00 MB
+dealing with 19
+[14:47:13] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  31%|███▏      | 20/64 [58:19<2:10:07, 177.45s/it][A[ASelf.trainer.train duration: 135.8097 seconds
+显存占用: 7273.19 MB, 已预留显存: 7796.00 MB
+dealing with 20
+[14:50:16] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  33%|███▎      | 21/64 [1:01:30<2:10:03, 181.48s/it][A[ASelf.trainer.train duration: 145.1522 seconds
+显存占用: 7615.74 MB, 已预留显存: 8222.00 MB
+dealing with 21
+[14:53:27] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  34%|███▍      | 22/64 [1:04:18<2:04:13, 177.46s/it][A[ASelf.trainer.train duration: 121.5359 seconds
+显存占用: 7956.03 MB, 已预留显存: 8488.00 MB
+dealing with 22
+[14:56:16] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  36%|███▌      | 23/64 [1:07:22<2:02:34, 179.39s/it][A[ASelf.trainer.train duration: 138.4024 seconds
+显存占用: 8298.20 MB, 已预留显存: 8866.00 MB
+dealing with 23
+[14:59:19] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  38%|███▊      | 24/64 [1:10:13<1:57:58, 176.97s/it][A[ASelf.trainer.train duration: 123.7670 seconds
+显存占用: 8640.30 MB, 已预留显存: 9228.00 MB
+dealing with 24
+[15:02:10] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  39%|███▉      | 25/64 [1:13:00<1:53:11, 174.15s/it][A[ASelf.trainer.train duration: 121.4805 seconds
+显存占用: 8984.06 MB, 已预留显存: 9636.00 MB
+dealing with 25
+[15:04:58] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  41%|████      | 26/64 [1:15:42<1:47:53, 170.36s/it][A[ASelf.trainer.train duration: 114.1109 seconds
+显存占用: 9326.20 MB, 已预留显存: 9968.00 MB
+dealing with 26
+[15:07:39] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  42%|████▏     | 27/64 [1:19:26<1:54:59, 186.47s/it][A[ASelf.trainer.train duration: 177.1996 seconds
+显存占用: 9667.68 MB, 已预留显存: 10408.00 MB
+dealing with 27
+[15:11:24] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  44%|████▍     | 28/64 [1:22:28<1:51:01, 185.05s/it][A[ASelf.trainer.train duration: 135.7258 seconds
+显存占用: 10008.17 MB, 已预留显存: 10686.00 MB
+dealing with 28
+[15:14:25] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  45%|████▌     | 29/64 [1:25:20<1:45:45, 181.29s/it][A[ASelf.trainer.train duration: 127.1319 seconds
+显存占用: 10351.77 MB, 已预留显存: 11008.00 MB
+dealing with 29
+[15:17:18] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  47%|████▋     | 30/64 [1:28:31<1:44:22, 184.20s/it][A[ASelf.trainer.train duration: 146.5299 seconds
+显存占用: 10690.77 MB, 已预留显存: 11392.00 MB
+dealing with 30
+[15:20:29] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  48%|████▊     | 31/64 [1:31:46<1:42:58, 187.23s/it][A[ASelf.trainer.train duration: 145.4863 seconds
+显存占用: 11034.25 MB, 已预留显存: 11708.00 MB
+dealing with 31
+[15:23:43] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  50%|█████     | 32/64 [1:34:54<1:39:59, 187.47s/it][A[ASelf.trainer.train duration: 143.3813 seconds
+显存占用: 11375.56 MB, 已预留显存: 12104.00 MB
+dealing with 32
+[15:26:51] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  52%|█████▏    | 33/64 [1:37:42<1:33:52, 181.69s/it][A[ASelf.trainer.train duration: 122.8763 seconds
+显存占用: 11716.99 MB, 已预留显存: 12390.00 MB
+dealing with 33
+[15:29:39] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  53%|█████▎    | 34/64 [1:40:48<1:31:28, 182.95s/it][A[ASelf.trainer.train duration: 140.5649 seconds
+显存占用: 12057.73 MB, 已预留显存: 12770.00 MB
+dealing with 34
+[15:32:45] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  55%|█████▍    | 35/64 [1:44:12<1:31:32, 189.38s/it][A[ASelf.trainer.train duration: 161.6012 seconds
+显存占用: 12399.99 MB, 已预留显存: 13206.00 MB
+dealing with 35
+[15:36:10] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  56%|█████▋    | 36/64 [1:47:39<1:30:47, 194.56s/it][A[ASelf.trainer.train duration: 164.1225 seconds
+显存占用: 12742.34 MB, 已预留显存: 13606.00 MB
+dealing with 36
+[15:39:36] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  58%|█████▊    | 37/64 [1:50:40<1:25:48, 190.67s/it][A[ASelf.trainer.train duration: 139.2632 seconds
+显存占用: 13085.09 MB, 已预留显存: 13834.00 MB
+dealing with 37
+[15:42:38] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  59%|█████▉    | 38/64 [1:54:00<1:23:49, 193.46s/it][A[ASelf.trainer.train duration: 158.3647 seconds
+显存占用: 13426.04 MB, 已预留显存: 14298.00 MB
+dealing with 38
+[15:45:58] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  61%|██████    | 39/64 [1:57:19<1:21:16, 195.06s/it][A[ASelf.trainer.train duration: 156.0813 seconds
+显存占用: 13769.55 MB, 已预留显存: 14642.00 MB
+dealing with 39
+[15:49:17] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  62%|██████▎   | 40/64 [2:00:13<1:15:25, 188.56s/it][A[ASelf.trainer.train duration: 131.2535 seconds
+显存占用: 14108.37 MB, 已预留显存: 14918.00 MB
+dealing with 40
+[15:52:10] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  64%|██████▍   | 41/64 [2:02:59<1:09:43, 181.87s/it][A[ASelf.trainer.train duration: 123.7916 seconds
+显存占用: 14449.50 MB, 已预留显存: 15210.00 MB
+dealing with 41
+[15:54:57] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  66%|██████▌   | 42/64 [2:06:15<1:08:13, 186.08s/it][A[ASelf.trainer.train duration: 149.3234 seconds
+显存占用: 14791.54 MB, 已预留显存: 15684.00 MB
+dealing with 42
+[15:58:12] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+saving data to data/shapenet/init/transforms.json
+
+
+viewpoint:  67%|██████▋   | 43/64 [2:09:15<1:04:31, 184.35s/it][A[ASelf.trainer.train duration: 136.3525 seconds
+显存占用: 15133.00 MB, 已预留显存: 15956.00 MB
+dealing with 43
+[16:01:13] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+entropy use uniform sampler: False
+Generating data for init
+Failed to open dir (No such file or directory): /run/user/1003/gvfs/
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/tyro/constructors/_struct_spec.py:592: UserWarning: Mutable type <class 'config.EnvConfig'> is used as a default value for `env`. This is dangerous! Consider using `dataclasses.field(default_factory=...)` or marking <class 'config.EnvConfig'> as frozen.
+  warnings.warn(
+Exp Name:  shapenet_nvf_ngp_dist_spherical_0115_202311
+Run 0
+CUDA
+Generating data for init
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylcompat.py:69: BoxxWarning: warning from boxx
+    os.environ["DISPLAY"] is not found
+    plt.show() are redirect to plt.savefig(tmp)
+    function: show, loga, crun, heatmap, plot will be affected
+  def __setDisplayEnv():
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+saving data to data/shapenet/init/transforms.json
+[20:23:20] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
+╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
+│        ╷                                                                                     │
+│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
+│        ╵                                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[NOTE] Not running eval iterations since only viewer is enabled.
+Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
+No Nerfstudio checkpoint to load, so training from scratch.
+Disabled tensorboard/wandb event writers
+Using Dist Agent
+Starts extracting mesh
+Ends extracting mesh
+Generating data for eval
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+saving data to data/shapenet/eval/transforms.json
+entropy use uniform sampler: False
+logging events to: results/log/shapenet_nvf_ngp_dist_spherical_0115_202311/train/run-0/step-0
+/home/zhengquan/04-fep-nbv/nvf/active_mapping/agents/DistAgent.py:294: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  poses = torch.concat((rot_quat[:,[3,0,1,2]], torch.tensor(cameras).squeeze()),dim=1)
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/torchmetrics/utilities/prints.py:70: FutureWarning: Importing `spectral_angle_mapper` from `torchmetrics.functional` was deprecated and will be removed in 2.0. Import `spectral_angle_mapper` from `torchmetrics.image` instead.
+  _future_warning(
+Start Training NeRF
+Self.trainer.train duration: 235.3340 seconds
+显存占用: 380.29 MB, 已预留显存: 4846.00 MB
+Start Planning
+显存占用: 380.29 MB, 已预留显存: 646.00 MB
+显存占用: 377.55 MB, 已预留显存: 646.00 MB
+Entropy Type: <class 'nvf.uncertainty.entropy_renderers.VisibilityEntropyRenderer'> 
+显存占用: 377.55 MB, 已预留显存: 656.00 MB
+距离前的系数：0.0
+enropy calculation spent: 0.06330132484436035s
+[0.0, 1.566808972105112e-05, -9.258535861968994, -8.897196610768637]
+eval {'psnr': 23.7367, 'rgb_loss': 0.0042}
+Select pos at 0 [ 1.1056767 -1.1056767 -1.2469796]
+/home/zhengquan/anaconda3/envs/nvf/lib/python3.10/site-packages/boxx/ylimg/ylimgTool.py:46: FutureWarning: The plugin infrastructure in `skimage.io` and the parameter `plugin` are deprecated since version 0.25 and will be removed in 0.27 (or later). To avoid this warning, please do not use the parameter `plugin`. Instead, use `imageio` or other I/O packages directly. See also `imread`.
+  return imread(fname, as_grey, plugin, **plugin_args)
+entropy use uniform sampler: False
+logging events to: results/log/shapenet_nvf_ngp_dist_spherical_0115_202311/train/run-0/step-1
+Traceback (most recent call last):
+  File "/home/zhengquan/04-fep-nbv/eval.py", line 371, in <module>
+    multi_evaluation(cfg)
+  File "/home/zhengquan/04-fep-nbv/eval.py", line 268, in multi_evaluation
+    result = evaluate(cfg, i)
+  File "/home/zhengquan/04-fep-nbv/eval.py", line 191, in evaluate
+    action = agent.act(obs, action)
+UnboundLocalError: local variable 'obs' referenced before assignment

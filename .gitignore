@@ -1,0 +1,10 @@
+data/images/
+data/test/
+data/shapenet/
+nohup_log/
+results/
+cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models/step-000004999.ckpt
+cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models/step-000004999.ckpt
+cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models/step-000004999.ckpt
+cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models/step-000004999.ckpt
+cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models/step-000004999.ckpt
