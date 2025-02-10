@@ -1,58 +1,0 @@
-nohup: ignoring input
-/remote-home/zzq/.conda/envs/nvf/lib/python3.10/site-packages/tyro/_fields.py:1066: UserWarning: Mutable type <class 'config.EnvConfig'> is used as a default value for `env`. This is dangerous! Consider using `dataclasses.field(default_factory=...)` or marking <class 'config.EnvConfig'> as frozen.
-  warnings.warn(
-Warning:
-Unable to load the following plugins:
-
-	libio_e57.so: libio_e57.so does not seem to be a Qt Plugin.
-
-Cannot load library /remote-home/zzq/.conda/envs/nvf/lib/python3.10/site-packages/pymeshlab/lib/plugins/libio_e57.so: (/lib/x86_64-linux-gnu/libp11-kit.so.0: undefined symbol: ffi_type_pointer, version LIBFFI_BASE_7.0)
-
-  0%|          | 0/64 [00:00<?, ?it/s]  9%|▉         | 6/64 [00:00<00:01, 53.98it/s] 20%|██        | 13/64 [00:00<00:00, 62.25it/s] 31%|███▏      | 20/64 [00:00<00:00, 60.43it/s] 44%|████▍     | 28/64 [00:00<00:00, 65.18it/s] 61%|██████    | 39/64 [00:00<00:00, 73.85it/s] 73%|███████▎  | 47/64 [00:00<00:00, 73.79it/s] 88%|████████▊ | 56/64 [00:00<00:00, 74.63it/s]100%|██████████| 64/64 [00:00<00:00, 72.61it/s]
-dealing with policy_1 uncertainty
-[2, 7]
-[2, 7, 1]
-[2, 7, 1, 5]
-[2, 7, 1, 5, 3]
-[2, 7, 1, 5, 3, 6]
-[2, 7, 1, 5, 3, 6, 0]
-[2, 7, 1, 5, 3, 6, 0, 4]
-[2, 7, 1, 5, 3, 6, 0, 4, 15]
-[2, 7, 1, 5, 3, 6, 0, 4, 15, 8]
-[2, 7, 1, 5, 3, 6, 0, 4, 15, 8, 14]
-[2, 7, 1, 5, 3, 6, 0, 4, 15, 8, 14, 9]
-[2, 7, 1, 5, 3, 6, 0, 4, 15, 8, 14, 9, 10]
-[2, 7, 1, 5, 3, 6, 0, 4, 15, 8, 14, 9, 10, 12]
-[2, 7, 1, 5, 3, 6, 0, 4, 15, 8, 14, 9, 10, 12, 13]
-[2, 7, 1, 5, 3, 6, 0, 4, 15, 8, 14, 9, 10, 12, 13, 11]
-[2, 7, 1, 5, 3, 6, 0, 4, 15, 8, 14, 9, 10, 12, 13, 11, 59]
-[2, 7, 1, 5, 3, 6, 0, 4, 15, 8, 14, 9, 10, 12, 13, 11, 59, 62]
-[2, 7, 1, 5, 3, 6, 0, 4, 15, 8, 14, 9, 10, 12, 13, 11, 59, 62, 61]
-[2, 7, 1, 5, 3, 6, 0, 4, 15, 8, 14, 9, 10, 12, 13, 11, 59, 62, 61, 58]
-[2, 7, 1, 5, 3, 6, 0, 4, 15, 8, 14, 9, 10, 12, 13, 11, 59, 62, 61, 58, 57]
-CUDA
-Generating data for init
-/remote-home/zzq/.conda/envs/nvf/lib/python3.10/site-packages/boxx/ylcompat.py:69: BoxxWarning: warning from boxx
-    os.environ["DISPLAY"] is not found
-    plt.show() are redirect to plt.savefig(tmp)
-    function: show, loga, crun, heatmap, plot will be affected
-  def __setDisplayEnv():
-saving data to data/shapenet/init/transforms.json
-Starts extracting mesh
-Ends extracting mesh
-Generating data for eval
-saving data to data/shapenet/eval/transforms.json
-[18:39:22] Saving checkpoints to: cfg/config/dataset/instant-ngp/latest_checkpoint/nerfstudio_models      trainer.py:142
-╭─────────────────────────────────────────── Viewer ───────────────────────────────────────────╮
-│        ╷                                                                                     │
-│   HTTP │ https://viewer.nerf.studio/versions/23-05-15-1/?websocket_url=ws://localhost:7007   │
-│        ╵                                                                                     │
-╰──────────────────────────────────────────────────────────────────────────────────────────────╯
-[NOTE] Not running eval iterations since only viewer is enabled.
-Use --vis {wandb, tensorboard, viewer+wandb, viewer+tensorboard} to run with eval.
-No Nerfstudio checkpoint to load, so training from scratch.
-Disabled tensorboard/wandb event writers
-entropy use uniform sampler: False
-  0%|          | 0/21 [00:00<?, ?it/s]/remote-home/zzq/.conda/envs/nvf/lib/python3.10/site-packages/torchmetrics/utilities/prints.py:70: FutureWarning: Importing `spectral_angle_mapper` from `torchmetrics.functional` was deprecated and will be removed in 2.0. Import `spectral_angle_mapper` from `torchmetrics.image` instead.
-  _future_warning(
-  5%|▍         | 1/21 [16:28<5:29:30, 988.55s/it] 10%|▉         | 2/21 [31:44<4:59:26, 945.62s/it] 14%|█▍        | 3/21 [47:17<4:42:00, 940.02s/it]
