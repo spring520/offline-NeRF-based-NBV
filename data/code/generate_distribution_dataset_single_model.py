@@ -130,6 +130,7 @@ def generate_gt_images(cfg, absolute_viewpoint_poses, gt_images_path):
 
 
 if __name__=='__main__':
+    time1 = time.time()
     output_dataset_path = '/home/zhengquan/04-fep-nbv/data/test/distribution_generation_test' # 不确定性数据集
     model_path = '/mnt/hdd/zhengquan/Shapenet/ShapeNetCore.v2/02691156/1a6ad7a24bb89733f412783097373bdc'
 
@@ -192,7 +193,7 @@ if __name__=='__main__':
             save_img(obs[0],image_path)
             image.save(example_image_path)
             with open(uncertainty_path, 'w') as f:
-                json.dump(Uncertainty, f)
+               json.dump(Uncertainty, f)
             nerf_path = os.path.join(nerf_dir, f"viewpoint_{input_viewpoint_index}.ckpt")
             NeRF_pipeline.save_ckpt(nerf_path)
             
@@ -209,4 +210,5 @@ if __name__=='__main__':
             print(f"single viewpoint single offset_phi运行时间: {time2-time1:.2f} 秒")
             print(f"single viewpoint single offset_phi运行时间: {(time2-time1) / 60:.2f} 分钟")
 
-
+    time2 = time.time()
+    print(f"代码运行时间：{((time2-time1)/5):.5f} 分")
