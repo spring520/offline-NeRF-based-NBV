@@ -1,6 +1,10 @@
 import subprocess
 from concurrent.futures import ProcessPoolExecutor, as_completed
 import os
+import random
+import time
+root_path = os.getenv('nbv_root_path', '/default/path')
+shapenet_path = os.getenv('shapenet_path', '/default/shapenet/path')
 
 def get_free_gpu_memory():
     """获取每张 GPU 的可用显存（单位：MB）"""
@@ -53,28 +57,31 @@ def run_python_script(task_id, script_path, model_path, viewpoint, rotation, gpu
 
 def log_failed_task(task_id, model_path, viewpoint, rotation):
     """将失败的任务参数记录到文件"""
-    with open("/home/zhengquan/04-fep-nbv/failed_tasks.log", "a") as f:
+    with open(root_path+"/nohup_log/failed_tasks.log", "a") as f:
         f.write(f"任务 {task_id}: model_path={model_path}, viewpoint={viewpoint}, rotation={rotation}\n")
 
 
 if __name__ == "__main__":
     # 获取每张 GPU 的可用显存
     free_memory = get_free_gpu_memory()
-    free_memory = [24000]
-    task_memory_usage = 6000
+    # free_memory = [24000]
+    task_memory_usage = 5000
 
-    script_path = '/home/zhengquan/04-fep-nbv/data/code/single_rotation_distribution.py'  # 子任务 Python 脚本路径
+    script_path = os.path.join(root_path,'data/code/single_rotation_distribution.py')  # 子任务 Python 脚本路径
     viewpoints = [i for i in range(48)]                          # 总任务数
     rotations = [i for i in range(8)]
     max_workers = 6                            # 并行任务数
-    model_path = '/mnt/hdd/zhengquan/Shapenet/ShapeNetCore.v2/02691156/1a9b552befd6306cc8f2d5fe7449af61'
+    model_path = os.path.join(shapenet_path,'02691156/1a04e3eab45ca15dd86060f189eb133')
 
     # 计算每张 GPU 可并行任务数
     max_tasks_per_gpu = [free // task_memory_usage for free in free_memory]
     total_max_workers = sum(max_tasks_per_gpu)
+    # total_max_workers = 5
 
     print(f"每张 GPU 可运行任务数: {max_tasks_per_gpu}")
     print(f"总并行任务数: {total_max_workers}")
+
+    gpu_task_count = {i: 0 for i in range(len(get_free_gpu_memory()))}
 
     with ProcessPoolExecutor(max_workers=total_max_workers) as executor:
         futures = []
@@ -82,13 +89,35 @@ if __name__ == "__main__":
         for viewpoint in viewpoints:
             for rotation in rotations:
                 task_id = rotation+viewpoint*8
-                # 分配 GPU（轮询分配）
-                gpu_id = gpu_index % len(max_tasks_per_gpu) + 2
-                gpu_index += 1
+                # **循环等待有可用的 GPU**
+                while True:
+                    free_memory = get_free_gpu_memory()
+                    available_gpus = [
+                        i for i, mem in enumerate(free_memory)
+                        if mem > task_memory_usage and gpu_task_count[i] < max_tasks_per_gpu[i]
+                    ]
+
+                    if available_gpus:
+                        break  # 找到符合条件的 GPU，退出循环
+                    else:
+                        print("所有 GPU 都没有可用资源，等待 1 分钟后重试...")
+                        time.sleep(10)  # 等待 5 分钟后重试
+                # **随机选择一个符合条件的 GPU**
+                gpu_id = random.choice(available_gpus)
+                gpu_task_count[gpu_id] += 1  # 增加任务计数
+
                 # 提交任务
-                futures.append(
-                    executor.submit(run_python_script, task_id, script_path, model_path, viewpoint, rotation, gpu_id)
-                )
+                future = executor.submit(run_python_script, task_id, script_path, model_path, viewpoint, rotation, gpu_id)
+                # print("开始了一个任务，等待4分钟")
+                # time.sleep(4 * 60)  # 等待 5 分钟后重试
+
+                # **回调函数：任务完成后减少任务计数**
+                def task_done_callback(fut, gpu_id=gpu_id):
+                    gpu_task_count[gpu_id] -= 1
+
+                future.add_done_callback(task_done_callback)
+                futures.append(future)
+
 
             # 处理任务结果
             for future in as_completed(futures):

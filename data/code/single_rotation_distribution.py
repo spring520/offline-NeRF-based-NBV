@@ -6,7 +6,12 @@ import os
 from PIL import Image
 import torch
 from torchmetrics.functional import structural_similarity_index_measure
-sys.path.append("/home/zhengquan/04-fep-nbv")
+import os
+root_path = os.getenv('nbv_root_path', '/default/path')
+shapenet_path = os.getenv('shapenet_path', '/default/shapenet/path')
+distribution_dataset_path = os.getenv('distribution_dataset_path', '/default/distribution/dataset/path')
+sys.path.append(root_path)
+
 
 from config import *
 from fep_nbv.env.shapenet_env import set_env
@@ -129,13 +134,13 @@ def generate_distribution_single_rotation(model_path,input_viewpoint_index,offse
     offset_phi = offset_phi_index * 0.2 * np.pi
     candidate_viewpoint_poses = generate_HEALPix_viewpoints(n_side=2)
     candidate_viewpoint_pose = candidate_viewpoint_poses[input_viewpoint_index]
-    output_dataset_path = '/home/zhengquan/04-fep-nbv/data/test/distribution_generation_test'
+    output_dataset_path = distribution_dataset_path
     env = set_env(cfg)
 
     # 创建各种文件夹 image uncertainty nerf ckpt
     offset = model_path.split('/')[-2]
     category = offset2word(offset)
-    output_path = model_path.replace('/mnt/hdd/zhengquan/Shapenet/ShapeNetCore.v2',output_dataset_path)
+    output_path = model_path.replace(shapenet_path,output_dataset_path)
     output_path = output_path.replace(offset,category)
     # 创建 image 和 uncertainty 文件夹
     image_dir = os.path.join(output_path, "images")

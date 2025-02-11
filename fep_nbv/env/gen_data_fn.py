@@ -2,7 +2,11 @@ import numpy as np
 import torch
 import mathutils
 import sys
-sys.path.append("/attached/data/remote-home2/zzq/04-fep-nbv")
+import os
+root_path = os.getenv('nbv_root_path', '/default/path')
+shapenet_path = os.getenv('shapenet_path', '/default/shapenet/path')
+distribution_dataset_path = os.getenv('distribution_dataset_path', '/default/distribution/dataset/path')
+sys.path.append(root_path)
 
 from fep_nbv.env.utils import tensor2pose
 

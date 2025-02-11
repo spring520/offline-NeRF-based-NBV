@@ -82,13 +82,13 @@ class DynamicBatchPipeline(VanillaPipeline):
     def _update_dynamic_num_rays_per_batch(self, num_samples_per_batch: int):
         """Updates the dynamic number of rays per batch variable,
         based on the total number of samples in the last batch of rays."""
-        print('got num_samples_per_batch:', num_samples_per_batch)
-        print('original dynamic_num_rays_per_batch:', self.dynamic_num_rays_per_batch)
+        # print('got num_samples_per_batch:', num_samples_per_batch)
+        # print('original dynamic_num_rays_per_batch:', self.dynamic_num_rays_per_batch)
         self.dynamic_num_rays_per_batch = int(
             self.dynamic_num_rays_per_batch * (self.config.target_num_samples / num_samples_per_batch)
         )
         self.dynamic_num_rays_per_batch = min(self.dynamic_num_rays_per_batch, self.config.max_dynamic_num_rays_per_batch)
-        print('update dynamic_num_rays_per_batch', self.dynamic_num_rays_per_batch)
+        # print('update dynamic_num_rays_per_batch', self.dynamic_num_rays_per_batch)
 
     def get_train_loss_dict(self, step: int):
         model_outputs, loss_dict, metrics_dict = super().get_train_loss_dict(step)

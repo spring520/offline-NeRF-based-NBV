@@ -9,7 +9,10 @@ import time
 import torch
 from PIL import Image
 from torchmetrics.functional import structural_similarity_index_measure
-sys.path.append("/home/zhengquan/04-fep-nbv")
+root_path = os.getenv('nbv_root_path', '/default/path')
+shapenet_path = os.getenv('shapenet_path', '/default/shapenet/path')
+distribution_dataset_path = os.getenv('distribution_dataset_path', '/default/distribution/dataset/path')
+sys.path.append(root_path)
 
 from config import *
 from fep_nbv.utils.utils import *

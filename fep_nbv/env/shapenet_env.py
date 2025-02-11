@@ -5,7 +5,10 @@ import tyro
 import sys
 import json
 import mathutils
-sys.path.append("/attached/data/remote-home2/zzq/04-fep-nbv")
+root_path = os.getenv('nbv_root_path', '/default/path')
+shapenet_path = os.getenv('shapenet_path', '/default/shapenet/path')
+distribution_dataset_path = os.getenv('distribution_dataset_path', '/default/distribution/dataset/path')
+sys.path.append(root_path)
 
 from config import *
 from fep_nbv.env.shapenet_scene import ShapeNetScene

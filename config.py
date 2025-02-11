@@ -38,7 +38,7 @@ class EnvConfig:
     hdri_rotation: Tuple[float, float, float] = (0., 0, 0)
     cycles: bool = True
     cycles_samples: int = 10000
-    gpu = True
+    gpu = True # True
     scale: float = 2.
     horizon: int = 20
     n_init_views: int = 3
