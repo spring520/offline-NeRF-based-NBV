@@ -1,3 +1,0 @@
-nohup: ignoring input
-每张 GPU 可运行任务数: [0, 5, 5, 5]
-总并行任务数: 15
