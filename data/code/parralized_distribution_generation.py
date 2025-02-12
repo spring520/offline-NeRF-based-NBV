@@ -3,8 +3,10 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 import os
 import random
 import time
+from multiprocessing import Manager, Lock
 root_path = os.getenv('nbv_root_path', '/default/path')
 shapenet_path = os.getenv('shapenet_path', '/default/shapenet/path')
+
 
 def get_free_gpu_memory():
     """获取每张 GPU 的可用显存（单位：MB）"""
@@ -15,7 +17,7 @@ def get_free_gpu_memory():
     free_memory = [int(x) for x in result.stdout.decode('utf-8').strip().split('\n')]
     return free_memory
 
-def run_python_script(task_id, script_path, model_path, viewpoint, rotation, gpu_id):
+def run_python_script(task_id, script_path, model_path, viewpoint, rotation, gpu_id, running_tasks, task_lock):
     """
     运行一个 Python 脚本，传递参数。
     
@@ -26,7 +28,10 @@ def run_python_script(task_id, script_path, model_path, viewpoint, rotation, gpu
     :param rotation: 旋转参数
     :return: 任务结果
     """
-    print(f"任务 {task_id} 开始，使用 GPU {gpu_id}")
+    with task_lock:
+        running_tasks.value += 1
+        print(f"任务 {task_id} 开始，使用 GPU {gpu_id}，当前运行任务数: {running_tasks.value}")
+
 
     # 设置环境变量 CUDA_VISIBLE_DEVICES
     env = os.environ.copy()
@@ -45,14 +50,20 @@ def run_python_script(task_id, script_path, model_path, viewpoint, rotation, gpu
     ]
 
     # 运行子进程
-    result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, env=env)
+    
+    # 使用 Popen 进行非阻塞子进程调用
+    # result = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=env)
+    # stdout, stderr = result.communicate()
 
-    # 输出任务结果
+    with task_lock:
+        running_tasks.value -= 1
+
     if result.returncode == 0:
-        print(f"任务 {task_id} 完成")
+        print(f"任务 {task_id} 完成，当前运行任务数: {running_tasks.value}")
         return result.stdout.strip()
     else:
-        print(f"任务 {task_id} 失败: {result.stderr.strip()}")
+        print(f"任务 {task_id} 失败: {result.stderr.strip()}，当前运行任务数: {running_tasks.value}")
         return None
 
 def log_failed_task(task_id, model_path, viewpoint, rotation):
@@ -62,16 +73,22 @@ def log_failed_task(task_id, model_path, viewpoint, rotation):
 
 
 if __name__ == "__main__":
+    time1 = time.time()
+
+    manager = Manager()
+    running_tasks = manager.Value('i', 0)
+    task_lock = manager.Lock()
+
     # 获取每张 GPU 的可用显存
     free_memory = get_free_gpu_memory()
     # free_memory = [24000]
-    task_memory_usage = 5000
+    task_memory_usage = 4800
 
     script_path = os.path.join(root_path,'data/code/single_rotation_distribution.py')  # 子任务 Python 脚本路径
     viewpoints = [i for i in range(48)]                          # 总任务数
     rotations = [i for i in range(8)]
     max_workers = 6                            # 并行任务数
-    model_path = os.path.join(shapenet_path,'02691156/1a04e3eab45ca15dd86060f189eb133')
+    model_path = os.path.join(shapenet_path,'02691156/1a32f10b20170883663e90eaf6b4ca52')
 
     # 计算每张 GPU 可并行任务数
     max_tasks_per_gpu = [free // task_memory_usage for free in free_memory]
@@ -81,7 +98,7 @@ if __name__ == "__main__":
     print(f"每张 GPU 可运行任务数: {max_tasks_per_gpu}")
     print(f"总并行任务数: {total_max_workers}")
 
-    gpu_task_count = {i: 0 for i in range(len(get_free_gpu_memory()))}
+    gpu_task_count = manager.dict({i: 0 for i in range(len(get_free_gpu_memory()))})
 
     with ProcessPoolExecutor(max_workers=total_max_workers) as executor:
         futures = []
@@ -90,6 +107,12 @@ if __name__ == "__main__":
             for rotation in rotations:
                 task_id = rotation+viewpoint*8
                 # **循环等待有可用的 GPU**
+                while True:
+                    with task_lock:
+                        if running_tasks.value < total_max_workers:
+                            break
+                    print("任务过多，等待 1 分钟...")
+                    time.sleep(60)
                 while True:
                     free_memory = get_free_gpu_memory()
                     available_gpus = [
@@ -101,17 +124,14 @@ if __name__ == "__main__":
                         break  # 找到符合条件的 GPU，退出循环
                     else:
                         print("所有 GPU 都没有可用资源，等待 1 分钟后重试...")
-                        time.sleep(10)  # 等待 5 分钟后重试
+                        time.sleep(60)  # 等待 5 分钟后重试
                 # **随机选择一个符合条件的 GPU**
                 gpu_id = random.choice(available_gpus)
                 gpu_task_count[gpu_id] += 1  # 增加任务计数
 
                 # 提交任务
-                future = executor.submit(run_python_script, task_id, script_path, model_path, viewpoint, rotation, gpu_id)
-                # print("开始了一个任务，等待4分钟")
-                # time.sleep(4 * 60)  # 等待 5 分钟后重试
+                future = executor.submit(run_python_script, task_id, script_path, model_path, viewpoint, rotation, gpu_id, running_tasks, task_lock)
 
-                # **回调函数：任务完成后减少任务计数**
                 def task_done_callback(fut, gpu_id=gpu_id):
                     gpu_task_count[gpu_id] -= 1
 
@@ -123,8 +143,11 @@ if __name__ == "__main__":
             for future in as_completed(futures):
                 try:
                     output = future.result()
-                    if output:
-                        print(f"任务输出：\n{output}")
+                    # if output:
+                    #     print(f"任务输出：\n{output}")
                 except Exception as e:
                     print(f"任务执行异常: {e}")
                     log_failed_task(task_id, model_path, viewpoint, rotation)
+
+    time2 = time.time()
+    print(f"任务全部完成，总耗时: {((time2 - time1)/60/60):.2f} 小时")
