@@ -70,7 +70,7 @@ def delete_removed_models(full_shapenet_dir, remaining_json):
 
 if __name__=='__main__':
     shapenet_dir = shapenet_path
-    output_json = os.path.join(root_path,'json_files/current_shapenet_fudan113.json')
+    output_json = os.path.join(root_path,'json_files/current_shapenet.json')
     # delete_removed_models(shapenet_dir, output_json)
     record_remaining_models(shapenet_dir, output_json)
 
