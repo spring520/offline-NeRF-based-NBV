@@ -66,11 +66,38 @@ def delete_removed_models(full_shapenet_dir, remaining_json):
 
     print("未保留的模型已全部删除。")
 
+def merge_json_list_intersection(file1, file2, output_file):
+    # 读取第一个 JSON 文件
+    with open(file1, 'r') as f:
+        dict1 = json.load(f)
 
+    # 读取第二个 JSON 文件
+    with open(file2, 'r') as f:
+        dict2 = json.load(f)
+
+    # 取两个字典的键的交集
+    common_keys = set(dict1.keys()) & set(dict2.keys())
+
+    # 生成新的字典，对于相同键的值，取列表的交集
+    merged_dict = {key: list(set(dict1[key]) & set(dict2[key])) for key in common_keys}
+    for category in merged_dict.keys():
+        category_name = offset2word(category)
+        print(f'{category_name} \t\t\t remain {len(merged_dict[category])} models')
+        # print(f'{category_name}')
+
+    # 保存到新的 JSON 文件
+    with open(output_file, 'w') as f:
+        json.dump(merged_dict, f, indent=4)
+
+    print(f"合并完成，交集 JSON 文件已保存到: {output_file}")
 
 if __name__=='__main__':
     shapenet_dir = shapenet_path
     output_json = os.path.join(root_path,'json_files/current_shapenet.json')
-    # delete_removed_models(shapenet_dir, output_json)
-    record_remaining_models(shapenet_dir, output_json)
+    delete_removed_models(shapenet_dir, output_json)
+    # record_remaining_models(shapenet_dir, output_json)
+
+    # file1 = '/home/zhengquan/04-fep-nbv/json_files/current_shapenet_fudan113.json'
+    # file2 = '/home/zhengquan/04-fep-nbv/json_files/current_shapenet_ntu.json'
+    # merge_json_list_intersection(file1,file2,output_json)
 
