@@ -95,7 +95,7 @@ def check_and_update_status(model, viewpoint, rotation, model_status, distributi
     temp_model = os.path.join(category,model.split('/')[1])
     image_path = os.path.join(distribution_dataset_path, temp_model, f'images/viewpoint_{viewpoint}_offset_phi_{rotation}.png')
     if os.path.exists(image_path):
-        print('')
+        print(f'{model} final image exist, so set True')
         model_status[model]["finished"][viewpoint][rotation] = True
         return True
     return False

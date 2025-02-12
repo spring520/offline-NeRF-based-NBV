@@ -192,6 +192,7 @@ if __name__ == "__main__":
                         gpu_task_count[gpu_id] -= 1
                         if fut.result():
                             model_status[model]["finished"][viewpoint][rotation] = True
+                            print(f'{model} {viewpoint} {rotation} finished, set status to True')
                             save_status_to_file(model_status, output_file)
 
                     future.add_done_callback(task_done_callback)
