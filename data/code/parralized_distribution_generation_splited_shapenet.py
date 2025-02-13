@@ -113,7 +113,7 @@ def log_failed_task(task_id, model_path, viewpoint, rotation):
 if __name__ == "__main__":
     included_categories = ['airplane']
     percentage = 20
-    output_file = os.path.join(distribution_dataset_path,f'model_status_{percentage}.json')     # 输出文件路径
+    output_file = os.path.join(root_path,f'json_files/model_status_{percentage}.json')     # 输出文件路径
     if not os.path.exists(output_file):
         generate_model_status_json(shapenet_path, percentage=percentage/100,output_file=output_file)
     model_status = read_model_status(output_file)
@@ -131,7 +131,7 @@ if __name__ == "__main__":
     viewpoints = [i for i in range(48)]                          # 总任务数
     rotations = [i for i in range(8)]
     max_workers = 6                            # 并行任务数
-    model_path = os.path.join(shapenet_path,'02691156/1a32f10b20170883663e90eaf6b4ca52')
+    # model_path = os.path.join(shapenet_path,'02691156/1a32f10b20170883663e90eaf6b4ca52')
 
     # 计算每张 GPU 可并行任务数
     max_tasks_per_gpu = [free // task_memory_usage for free in free_memory]
@@ -153,6 +153,7 @@ if __name__ == "__main__":
             category = offset2word(model.split('/')[0])
             if category not in included_categories:
                 continue
+            model_path = os.path.join(shapenet_path,model)
 
             for viewpoint in viewpoints:
                 for rotation in rotations:

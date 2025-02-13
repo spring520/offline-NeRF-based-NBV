@@ -93,9 +93,9 @@ def merge_json_list_intersection(file1, file2, output_file):
 
 if __name__=='__main__':
     shapenet_dir = shapenet_path
-    output_json = os.path.join(root_path,'json_files/current_shapenet.json')
-    delete_removed_models(shapenet_dir, output_json)
-    # record_remaining_models(shapenet_dir, output_json)
+    output_json = os.path.join(root_path,'json_files/current_shapenet_fudan113.json')
+    # delete_removed_models(shapenet_dir, output_json)
+    record_remaining_models(shapenet_dir, output_json)
 
     # file1 = '/home/zhengquan/04-fep-nbv/json_files/current_shapenet_fudan113.json'
     # file2 = '/home/zhengquan/04-fep-nbv/json_files/current_shapenet_ntu.json'
