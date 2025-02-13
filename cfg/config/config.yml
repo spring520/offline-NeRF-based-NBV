@@ -2,11 +2,9 @@
 _target: !!python/name:nvf.nerfstudio_interface.nbv_trainer.NBVTrainer ''
 data: !!python/object/apply:pathlib.PosixPath
 - /
-- attached
-- data
-- remote-home2
-- zzq
-- 05-offline-NeRF-based-NBV
+- home
+- zhengquan
+- 04-fep-nbv
 - outputs
 - pipeline
 - dataset
@@ -97,11 +95,9 @@ pipeline: !!python/object:nerfstudio.pipelines.dynamic_batch.DynamicBatchPipelin
     collate_fn: !!python/name:nerfstudio.data.utils.nerfstudio_collate.nerfstudio_collate ''
     data: !!python/object/apply:pathlib.PosixPath
     - /
-    - attached
-    - data
-    - remote-home2
-    - zzq
-    - 05-offline-NeRF-based-NBV
+    - home
+    - zhengquan
+    - 04-fep-nbv
     - outputs
     - pipeline
     - dataset
@@ -109,11 +105,9 @@ pipeline: !!python/object:nerfstudio.pipelines.dynamic_batch.DynamicBatchPipelin
       _target: !!python/name:nvf.nerfstudio_interface.nbv_dataparser.NBVDataParser ''
       data: !!python/object/apply:pathlib.PosixPath
       - /
-      - attached
-      - data
-      - remote-home2
-      - zzq
-      - 05-offline-NeRF-based-NBV
+      - home
+      - zhengquan
+      - 04-fep-nbv
       - outputs
       - pipeline
       - dataset
