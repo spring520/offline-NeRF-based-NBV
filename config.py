@@ -46,7 +46,7 @@ class EnvConfig:
     gen_eval: bool  = False
     save_data: bool  = True
     root: str = "data"
-    target_path: str=''
+    target_path: str='/mnt/hdd/zhengquan/Shapenet/ShapeNetCore.v2/02691156/1a04e3eab45ca15dd86060f189eb133'
     viewpoint_index: int=0
     offset_phi_index: int=0
 
@@ -54,7 +54,7 @@ class EnvConfig:
 class ExpConfig:
     method: MethodType = MethodType.wd
     agent: AgentType = AgentType.dist #AgentType.base 
-    sampler: SamplerType = SamplerType.spherical # SamplerType.base
+    sampler: SamplerType = SamplerType.healpix # SamplerType.base
     model: ModelType = ModelType.ngp
     # scene: Literal["hubble", "lego", "room"] = "hubble"
     scene: SceneType = SceneType.shapenet
