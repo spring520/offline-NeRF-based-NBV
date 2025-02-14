@@ -7,6 +7,12 @@ from multiprocessing import Manager, Lock
 root_path = os.getenv('nbv_root_path', '/default/path')
 shapenet_path = os.getenv('shapenet_path', '/default/shapenet/path')
 distribution_dataset_path = os.getenv('distribution_dataset_path', '/default/distribution/dataset/path')
+
+if not os.path.exists(root_path):
+    root_path.replace('/attached/data','/attached')
+    shapenet_path.replace('/attached/data','/attached')
+    distribution_dataset_path.replace('/attached/data','/attached')
+    
 import sys
 sys.path.append(root_path)
 
@@ -111,7 +117,7 @@ def log_failed_task(task_id, model_path, viewpoint, rotation):
 
 
 if __name__ == "__main__":
-    included_categories = ['airplane']
+    included_categories = ['remote_control']
     percentage = 20
     output_file = os.path.join(root_path,f'json_files/model_status_{percentage}.json')     # 输出文件路径
     if not os.path.exists(output_file):

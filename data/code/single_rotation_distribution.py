@@ -10,6 +10,10 @@ import os
 root_path = os.getenv('nbv_root_path', '/default/path')
 shapenet_path = os.getenv('shapenet_path', '/default/shapenet/path')
 distribution_dataset_path = os.getenv('distribution_dataset_path', '/default/distribution/dataset/path')
+if not os.path.exists(root_path):
+    root_path.replace('/attached/data','/attached')
+    shapenet_path.replace('/attached/data','/attached')
+    distribution_dataset_path.replace('/attached/data','/attached')
 sys.path.append(root_path)
 
 
