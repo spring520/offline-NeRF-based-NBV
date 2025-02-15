@@ -54,7 +54,7 @@ class EnvConfig:
 class ExpConfig:
     method: MethodType = MethodType.wd
     agent: AgentType = AgentType.dist #AgentType.base 
-    sampler: SamplerType = SamplerType.spherical # SamplerType.base
+    sampler: SamplerType = SamplerType.healpix # SamplerType.base
     model: ModelType = ModelType.ngp
     # scene: Literal["hubble", "lego", "room"] = "hubble"
     scene: SceneType = SceneType.shapenet

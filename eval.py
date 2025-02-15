@@ -372,7 +372,7 @@ if __name__ == "__main__":
     cfg = tyro.cli(ExpConfig) # config
 
     # target_path = random_shapenet_model_path()
-    target_path = '/mnt/hdd/zhengquan/Shapenet/ShapeNetCore.v2/02691156/1a6ad7a24bb89733f412783097373bdc'
+    target_path = '/mnt/hdd/zhengquan/Shapenet/ShapeNetCore.v2/02691156/1a04e3eab45ca15dd86060f189eb133'
     obj_file_path = target_path+'/models/model_normalized.obj'
     cfg.env.target_path = obj_file_path
 

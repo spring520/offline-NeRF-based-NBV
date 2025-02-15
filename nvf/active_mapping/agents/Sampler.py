@@ -4,6 +4,7 @@ import torch.nn.functional as F
 from nvf.visibility.visibility import get_density, single_camera_field_opacity
 import numpy as np
 from fep_nbv.utils.generate_viewpoints import *
+from fep_nbv.utils.transform_viewpoints import polar2pose
 
 class BaseSampler():
     def __init__(self, cfg=None):
@@ -168,7 +169,7 @@ class SphericalSampler(BaseSampler):
 def sample_poses_spherical(n_sample,radius=2):
     azimuths = np.random.uniform(0, 2 * np.pi, n_sample)   # 方位角 phi，范围 [0, 2*pi]
     elevations = np.random.uniform(0, 2 * np.pi, n_sample)  # 俯仰角 theta，范围 [0, pi]
-    radius_ = np.full(n_sample,radius_)
+    radius_ = np.full(n_sample,radius)
     poses = polar2pose(azimuths,elevations,radius_)
     return poses
 
