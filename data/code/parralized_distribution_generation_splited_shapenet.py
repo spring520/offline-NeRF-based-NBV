@@ -9,9 +9,9 @@ shapenet_path = os.getenv('shapenet_path', '/default/shapenet/path')
 distribution_dataset_path = os.getenv('distribution_dataset_path', '/default/distribution/dataset/path')
 
 if not os.path.exists(root_path):
-    root_path.replace('/attached/data','/attached')
-    shapenet_path.replace('/attached/data','/attached')
-    distribution_dataset_path.replace('/attached/data','/attached')
+    root_path=root_path.replace('/attached/data','/attached')
+    shapenet_path=shapenet_path.replace('/attached/data','/attached')
+    distribution_dataset_path=distribution_dataset_path.replace('/attached/data','/attached')
     
 import sys
 sys.path.append(root_path)
