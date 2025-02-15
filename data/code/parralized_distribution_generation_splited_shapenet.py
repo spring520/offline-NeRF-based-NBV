@@ -117,7 +117,7 @@ def log_failed_task(task_id, model_path, viewpoint, rotation):
 
 
 if __name__ == "__main__":
-    included_categories = ['remote_control']
+    included_categories = ['plane']
     percentage = 20
     output_file = os.path.join(root_path,f'json_files/model_status_{percentage}.json')     # 输出文件路径
     if not os.path.exists(output_file):
