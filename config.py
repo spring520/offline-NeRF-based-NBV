@@ -46,9 +46,9 @@ class EnvConfig:
     gen_eval: bool  = False
     save_data: bool  = True
     root: str = "data"
-    target_path: str=''
-    viewpoint_index: int=0
-    offset_phi_index: int=0
+    target_path: str='/attached/data/remote-home2/zzq/data/shapenet/ShapeNetCore.v2/02691156/1ac29674746a0fc6b87697d3904b168b'
+    viewpoint_index: int=45
+    offset_phi_index: int=1
 
 @dataclass
 class ExpConfig:

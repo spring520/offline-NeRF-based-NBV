@@ -7,6 +7,8 @@ from PIL import Image
 import torch
 from torchmetrics.functional import structural_similarity_index_measure
 import os
+import cProfile
+import pstats
 root_path = os.getenv('nbv_root_path', '/default/path')
 shapenet_path = os.getenv('shapenet_path', '/default/shapenet/path')
 distribution_dataset_path = os.getenv('distribution_dataset_path', '/default/distribution/dataset/path')
@@ -181,7 +183,7 @@ def generate_distribution_single_rotation(model_path,input_viewpoint_index,offse
     image.save(example_image_path)
     with open(uncertainty_path, 'w') as f:
         json.dump(Uncertainty, f)
-    nerf_path = os.path.join(nerf_dir, f"viewpoint_{input_viewpoint_index}.ckpt")
+    nerf_path = os.path.join(nerf_dir, f"viewpoint_{input_viewpoint_index}_offset_phi_{offset_phi_index}.ckpt")
     NeRF_pipeline.save_ckpt(nerf_path)
     
     del Uncertainty
@@ -208,4 +210,9 @@ if __name__=='__main__':
     
     input_viewpoint_index =  cfg.env.viewpoint_index
     offset_phi_index =  cfg.env.offset_phi_index
+    profile_output = "profile_output.prof"
     generate_distribution_single_rotation(model_path,input_viewpoint_index,offset_phi_index,cfg)
+    # cProfile.run("generate_distribution_single_rotation(model_path,input_viewpoint_index,offset_phi_index,cfg)", profile_output)
+    # 读取并排序
+    # stats = pstats.Stats(profile_output)
+    # stats.strip_dirs().sort_stats("cumulative").print_stats(50)

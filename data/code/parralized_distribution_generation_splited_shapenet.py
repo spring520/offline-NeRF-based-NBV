@@ -117,7 +117,6 @@ if __name__ == "__main__":
     if not os.path.exists(output_file):
         generate_model_status_json(shapenet_path, percentage=percentage/100,output_file=output_file)
     model_status = read_model_status(output_file)
-    
     manager = Manager()
     running_tasks = manager.Value('i', 0)
     task_lock = manager.Lock()
@@ -125,7 +124,7 @@ if __name__ == "__main__":
     # 获取每张 GPU 的可用显存
     free_memory = get_free_gpu_memory()
     # free_memory = [24000]
-    task_memory_usage = 5000
+    task_memory_usage = 20000
 
     script_path = os.path.join(root_path,'data/code/single_rotation_distribution.py')  # 子任务 Python 脚本路径
     viewpoints = [i for i in range(48)]                          # 总任务数
