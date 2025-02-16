@@ -4,6 +4,7 @@ import os
 import random
 import time
 from multiprocessing import Manager, Lock
+import json
 root_path = os.getenv('nbv_root_path', '/default/path')
 shapenet_path = os.getenv('shapenet_path', '/default/shapenet/path')
 distribution_dataset_path = os.getenv('distribution_dataset_path', '/default/distribution/dataset/path')
@@ -12,7 +13,15 @@ if not os.path.exists(root_path):
     root_path=root_path.replace('/attached/data','/attached')
     shapenet_path=shapenet_path.replace('/attached/data','/attached')
     distribution_dataset_path=distribution_dataset_path.replace('/attached/data','/attached')
-    
+# 读取服务器配置信息
+config_path = os.path.join(root_path, 'server_config.json')
+with open(config_path, 'r') as f:
+    server_config = json.load(f)
+# 获取服务器 ID 和总服务器数
+SERVER_ID = server_config["server_id"]  # 当前服务器编号
+TOTAL_SERVERS = server_config["total_servers"]  # 服务器总数
+included_categories = ['airplane']
+
 import sys
 sys.path.append(root_path)
 
@@ -117,7 +126,7 @@ def log_failed_task(task_id, model_path, viewpoint, rotation):
 
 
 if __name__ == "__main__":
-    included_categories = ['airplane']
+    
     percentage = 20
     output_file = os.path.join(root_path,f'json_files/model_status_{percentage}.json')     # 输出文件路径
     if not os.path.exists(output_file):
@@ -148,10 +157,21 @@ if __name__ == "__main__":
 
     gpu_task_count = manager.dict({i: 0 for i in range(len(get_free_gpu_memory()))})
 
+    # **对模型列表进行排序并切片**
+    all_models = sorted([model for model in model_status.keys() if offset2word(model.split('/')[0]) in included_categories])  # 排序模型
+    models_per_server = len(all_models) // TOTAL_SERVERS
+    start_idx = (SERVER_ID - 1) * models_per_server
+    end_idx = start_idx + models_per_server if SERVER_ID < TOTAL_SERVERS else len(all_models)
+    models_to_process = all_models[start_idx:end_idx]  # 取当前服务器的部分
+    
+
+    print(f"服务器 {SERVER_ID}: 处理 {start_idx} 到 {end_idx} 之间的模型（共 {len(models_to_process)} 个）")
+
+
     with ProcessPoolExecutor(max_workers=total_max_workers) as executor:
         futures = []
 
-        for model in model_status.keys():
+        for model in models_to_process:
             if all_tasks_finished(model_status, model):
                 print(f"模型 {model} 的所有任务已完成，跳过...")
                 continue
