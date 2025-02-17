@@ -101,9 +101,12 @@ def check_and_update_status(model, viewpoint, rotation, model_status, distributi
     return False
 
 def save_status_to_file(model_status, output_file):
+    current_model_status = read_model_status(output_file)
+    current_model_status.update(model_status)
+    model_status.update(current_model_status)
     """保存状态到 JSON 文件"""
     with open(output_file, 'w') as f:
-        json.dump(model_status, f, indent=4)
+        json.dump(current_model_status, f, indent=4)
 
 # 示例调用
 if __name__ == "__main__":
