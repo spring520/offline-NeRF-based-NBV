@@ -139,7 +139,7 @@ if __name__ == "__main__":
     # 获取每张 GPU 的可用显存
     free_memory = get_free_gpu_memory()
     # free_memory = [24000]
-    task_memory_usage = 20000
+    task_memory_usage = 15000
 
     script_path = os.path.join(root_path,'data/code/single_rotation_distribution.py')  # 子任务 Python 脚本路径
     viewpoints = [i for i in range(48)]                          # 总任务数

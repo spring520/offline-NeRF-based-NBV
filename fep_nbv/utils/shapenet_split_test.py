@@ -5,6 +5,9 @@ from pathlib import Path
 from typing import List, Dict
 root_path = os.getenv('nbv_root_path', '/default/path')
 shapenet_path = os.getenv('shapenet_path', '/default/shapenet/path')
+if not os.path.exists(root_path):
+    root_path=root_path.replace('/attached/data','/attached')
+    shapenet_path=shapenet_path.replace('/attached/data','/attached')
 
 import sys
 sys.path.append(root_path)
