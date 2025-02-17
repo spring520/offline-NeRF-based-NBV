@@ -1,6 +1,0 @@
-{
-    "root_path": "/attached/data/remote-home2/zzq/05-offline-NeRF-based-NBV",
-    "shapenet_path": "/attached/data/remote-home2/zzq/data/shapenet/ShapeNetCore.v2",
-    "server_id": 1,
-    "total_servers":4 
-}
