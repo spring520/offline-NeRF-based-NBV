@@ -151,7 +151,8 @@ if __name__ == "__main__":
     # 计算每张 GPU 可并行任务数
     max_tasks_per_gpu = [free // task_memory_usage for free in free_memory]
     total_max_workers = sum(max_tasks_per_gpu)
-    total_max_workers = min(total_max_workers,MAX_WORKERS)
+    total_max_workers = min(total_max_workers, MAX_WORKERS)  # 限制最大并行任务数)
+    # total_max_workers = 5
 
     print(f"每张 GPU 可运行任务数: {max_tasks_per_gpu}")
     print(f"总并行任务数: {total_max_workers}")

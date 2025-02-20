@@ -29,6 +29,11 @@ class SceneType(StrEnum):
     hotdog = 'HotdogScene'
     shapenet = 'ShapeNetScene'
 
+class ActionType(StrEnum):
+    discrete = 'discrete'
+    sphere = 'continuous_sphere'
+    aabb = 'continuous_aabb' 
+
 @dataclass
 class EnvConfig:
     scene: SceneType = SceneType.shapenet
@@ -49,6 +54,7 @@ class EnvConfig:
     target_path: str='/attached/data/remote-home2/zzq/data/shapenet/ShapeNetCore.v2/02691156/1ac29674746a0fc6b87697d3904b168b'
     viewpoint_index: int=45
     offset_phi_index: int=1
+    action_space_mode = ActionType.discrete
 
 @dataclass
 class ExpConfig:
