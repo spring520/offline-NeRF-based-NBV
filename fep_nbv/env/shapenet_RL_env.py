@@ -8,12 +8,17 @@ import mathutils
 root_path = os.getenv('nbv_root_path', '/default/path')
 shapenet_path = os.getenv('shapenet_path', '/default/shapenet/path')
 distribution_dataset_path = os.getenv('distribution_dataset_path', '/default/distribution/dataset/path')
+if not os.path.exists(root_path):
+    root_path=root_path.replace('/attached/data','/attached')
+    shapenet_path=shapenet_path.replace('/attached/data','/attached')
+    distribution_dataset_path=distribution_dataset_path.replace('/attached/data','/attached')
 sys.path.append(root_path)
 
 from config import *
 from fep_nbv.env.shapenet_scene import ShapeNetScene
 from fep_nbv.env.utils import *
 from fep_nbv.utils import *
+from fep_nbv.utils.generate_viewpoints import generate_HEALPix_viewpoints
 
 def set_env(cfg):
     if cfg.scene.name == 'hubble':
@@ -39,7 +44,6 @@ def set_env(cfg):
     # breakpoint()
     return env
 
-
 class ShapeNetEnviroment(gym.Env):
     # init_images = 10
     # horizon = 20
@@ -52,7 +56,7 @@ class ShapeNetEnviroment(gym.Env):
         
         self.pose_history = []
         self.obs_history = []
-
+        self.action_space_mode = cfg.action_space_mode  
         # set env
         cfg.object_aabb = torch.tensor([[-1, -1, -1], [1, 1, 1]])#*1.1
         factor = 2
@@ -67,11 +71,56 @@ class ShapeNetEnviroment(gym.Env):
         # Initialize state
         self.reset()
 
-        print(f'env info: \n object_aabb {self.cfg.object_aabb} \n target_aabb {self.cfg.target_aabb} \n camera_aabb {self.cfg.camera_aabb} \n density_threshold {self.cfg.density_threshold}')
+        self.initialize_action_space()
+
+    def initialize_action_space(self):
+        """初始化不同模式的动作空间"""
+        if self.action_space_mode == 'discrete':
+            self.discrete_actions = generate_HEALPix_viewpoints(n_side=2)
+            self.action_space = gym.spaces.Discrete(len(self.discrete_actions))
+        elif self.action_space_mode == 'continuous_sphere':
+            self.action_space = gym.spaces.Box(
+                low=np.array([0, 0]), 
+                high=np.array([2*np.pi, np.pi]), 
+                dtype=np.float32
+            )  # 方位角俯仰角
+        elif self.action_space_mode == 'continuous_aabb':
+            lower, upper = self.camera_aabb.numpy()
+            self.action_space = gym.spaces.Box(
+                low=lower, 
+                high=upper, 
+                dtype=np.float32
+            )  # 相机 AABB 内的 3D 位置
+        else:
+            raise ValueError(f"Unsupported action space mode: {self.action_space_mode}")
+
 
     def step(self, action):
-        if action.ndim==1:
-            action = action.unsqueeze(0)
+        if self.action_space_mode == 'discrete':
+            # 动作为索引，选择离散动作列表中的视角
+            pose = self.discrete_actions[action]
+
+        elif self.action_space_mode == 'continuous_sphere':
+            # 动作是 [方位角, 俯仰角]，转换为 3D 位置 + 旋转四元数
+            azimuth, elevation = action[0], action[1]
+            radius = 2  # 固定半径
+            x = radius * np.sin(elevation) * np.cos(azimuth)
+            y = radius * np.cos(elevation)
+            z = radius * np.sin(elevation) * np.sin(azimuth)
+            position = torch.tensor([x, y, z])
+            quat = quaternion_from_euler(azimuth, elevation)
+            pose = pose_to_7d(quat, position)
+
+        elif self.action_space_mode == 'continuous_aabb':
+            # 动作为3D位置，从AABB内随机采样
+            position = sample_pose_from_aabb(self.camera_aabb.numpy())
+            target = torch.tensor([0.0, 0.0, 0.0])  # 目标位置，假设是世界中心
+            quat = look_at_rotation(position.numpy(), target.numpy())
+            pose = pose_to_7d(quat, position)
+
+        else:
+            raise ValueError(f"Unsupported action space mode: {self.action_space_mode}")
+
         position = self.state
 
         # new_poses = []
@@ -167,31 +216,15 @@ class ShapeNetEnviroment(gym.Env):
 
 
 if __name__=='__main__':
-    # 环境创建初始化
-    # 函数：step, reset, render, close
     cfg = tyro.cli(ExpConfig)
     cfg.env.scene = SceneType.shapenet
+    model_path = random_shapenet_model_path()
+    # model_path = cfg.env.target_path
+    obj_file_path = model_path+'/models/model_normalized.obj'
+    cfg.env.target_path = obj_file_path
 
-    target_path = random_shapenet_model_path()
-    obj_file_path = target_path+'/models/model_normalized.obj'
-    json_path = obj_file_path[:-4]+'.json'
-    with open(json_path, 'r') as file:
-        data = json.load(file)
-        centroid = data.get("centroid", None)
-    cfg.env.target_path = obj_file_path # type: ignore
+    env = set_env(cfg)
 
-    env = ShapeNetEnviroment(cfg.env)
+    print(env.action_space)
 
-    # 渲染图像
-    camera_position = mathutils.Vector((1, 1, 1))
-    target_position = mathutils.Vector((0, 0, 0))
-    direction = target_position - camera_position
-    rot_quat = torch.tensor(direction.normalized().to_track_quat('-Z', 'Y')) # wxyz
-    fixed_pose = torch.concat((rot_quat[[1,2,3,0]], torch.tensor(camera_position))) # xyzwxyz
-    obs,_,_,_ = env.step(fixed_pose)
-
-    print(obs[0].shape)
-    print('env test success')
-
-
-    pass 
+    

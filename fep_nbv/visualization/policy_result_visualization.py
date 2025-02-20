@@ -8,21 +8,23 @@ sys.path.append("/home/zhengquan/04-fep-nbv")
 
 
 if __name__=='__main__':
+    policy = 'last_top_n'
     result_paths = [
         # 'data/test/policy_eval_test/plane/policy_1/MSE/metrics.xlsx',
-        'data/test/policy_eval_test/plane/policy_1/PSNR/metrics.xlsx',
+        # 'data/test/policy_eval_test/plane/policy_1/PSNR/metrics.xlsx',
         # 'data/test/policy_eval_test/plane/policy_1/SSIM/metrics.xlsx',
         # 'data/test/policy_eval_test/plane/policy_1/uncertainty/metrics.xlsx',
-        '/home/zhengquan/04-fep-nbv/data/test/eval_test/shapenet_nvf_ngp_dist_base_0205_205545/run-0/metrics.xlsx',
+        # '/home/zhengquan/04-fep-nbv/data/test/eval_test/shapenet_nvf_ngp_dist_base_0205_205545/run-0/metrics.xlsx',
         # '/home/zhengquan/04-fep-nbv/data/test/policy_eval_test/plane/policy_3/uncertainty/metrics.xlsx',
-        '/home/zhengquan/04-fep-nbv/data/test/policy_eval_test/plane/policy_3/MSE/metrics.xlsx',
+        # '/home/zhengquan/04-fep-nbv/data/test/policy_eval_test/plane/policy_3/MSE/metrics.xlsx',
         # '/home/zhengquan/04-fep-nbv/data/test/policy_eval_test/plane/policy_3/SSIM/metrics.xlsx',
         # '/home/zhengquan/04-fep-nbv/data/test/policy_eval_test/plane/policy_3/PSNR/metrics.xlsx',
-        # '/home/zhengquan/04-fep-nbv/data/test/policy_eval_test/plane/policy_2/uncertainty/metrics.xlsx',
-        '/home/zhengquan/04-fep-nbv/data/test/policy_eval_test/plane/policy_2/MSE/metrics.xlsx',
-        # '/home/zhengquan/04-fep-nbv/data/test/policy_eval_test/plane/policy_2/SSIM/metrics.xlsx',
-        # '/home/zhengquan/04-fep-nbv/data/test/policy_eval_test/plane/policy_2/PSNR/metrics.xlsx',
+        f'/home/zhengquan/04-fep-nbv/data/test/policy_eval_test/plane/{policy}/MSE/metrics.xlsx',
+        f'/home/zhengquan/04-fep-nbv/data/test/policy_eval_test/plane/{policy}/PSNR/metrics.xlsx',
+        f'/home/zhengquan/04-fep-nbv/data/test/policy_eval_test/plane/{policy}/SSIM/metrics.xlsx',
+        f'/home/zhengquan/04-fep-nbv/data/test/policy_eval_test/plane/{policy}/uncertainty/metrics.xlsx',
     ]
+    
     keys = ['psnr', 'ssim']
 
     results = {}
@@ -43,4 +45,4 @@ if __name__=='__main__':
             plt.xlabel('Step Index')
             plt.ylabel(key)
             plt.legend()
-            plt.savefig(f'/home/zhengquan/04-fep-nbv/data/test/visualizaton/{key}.png') 
+            plt.savefig(f'/home/zhengquan/04-fep-nbv/data/test/visualizaton/{policy}_{key}.png') 

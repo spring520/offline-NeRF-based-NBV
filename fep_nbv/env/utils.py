@@ -15,7 +15,14 @@ import cv2
 import json
 from pathlib import Path
 import sys
-sys.path.append("/home/zhengquan/04-fep-nbv")
+root_path = os.getenv('nbv_root_path', '/default/path')
+shapenet_path = os.getenv('shapenet_path', '/default/shapenet/path')
+distribution_dataset_path = os.getenv('distribution_dataset_path', '/default/distribution/dataset/path')
+if not os.path.exists(root_path):
+    root_path=root_path.replace('/attached/data','/attached')
+    shapenet_path=shapenet_path.replace('/attached/data','/attached')
+    distribution_dataset_path=distribution_dataset_path.replace('/attached/data','/attached')
+sys.path.append(root_path)
 
 from fep_nbv.utils.utils import offset2word
 
@@ -321,7 +328,7 @@ def write_to_json(filename: Path, content: dict):
         json.dump(content, file)
 
 def random_shapenet_model_path():
-    shapenet_dataset_path = '/mnt/hdd/zhengquan/Shapenet/ShapeNetCore.v2'
+    shapenet_dataset_path = shapenet_path
     categories = [
         category for category in os.listdir(shapenet_dataset_path)
         if os.path.isdir(os.path.join(shapenet_dataset_path, category))
@@ -351,7 +358,7 @@ def random_shapenet_model_path():
 
 
 def shapenet_model_path_dict():
-    shapenet_dataset_path = '/mnt/hdd/zhengquan/Shapenet/ShapeNetCore.v2'
+    shapenet_dataset_path = shapenet_path
     shapenet_dict = {}
     # 遍历根目录下的类别目录
     for category in os.listdir(shapenet_dataset_path):
