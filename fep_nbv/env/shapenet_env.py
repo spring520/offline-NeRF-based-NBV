@@ -67,7 +67,7 @@ class ShapeNetEnviroment(gym.Env):
         # Initialize state
         self.reset()
 
-        print(f'env info: \n object_aabb {self.cfg.object_aabb} \n target_aabb {self.cfg.target_aabb} \n camera_aabb {self.cfg.camera_aabb} \n density_threshold {self.cfg.density_threshold}')
+        # print(f'env info: \n object_aabb {self.cfg.object_aabb} \n target_aabb {self.cfg.target_aabb} \n camera_aabb {self.cfg.camera_aabb} \n density_threshold {self.cfg.density_threshold}')
 
     def step(self, action):
         if action.ndim==1:
