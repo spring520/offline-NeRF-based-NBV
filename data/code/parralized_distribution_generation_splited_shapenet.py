@@ -20,6 +20,7 @@ with open(config_path, 'r') as f:
 # 获取服务器 ID 和总服务器数
 SERVER_ID = server_config["server_id"]  # 当前服务器编号
 TOTAL_SERVERS = server_config["total_servers"]  # 服务器总数
+MAX_WORKERS = server_config["max_workers"]  # 最大并行任务数
 included_categories = ['airplane']
 
 import sys
@@ -150,7 +151,7 @@ if __name__ == "__main__":
     # 计算每张 GPU 可并行任务数
     max_tasks_per_gpu = [free // task_memory_usage for free in free_memory]
     total_max_workers = sum(max_tasks_per_gpu)
-    # total_max_workers = 5
+    total_max_workers = min(total_max_workers,MAX_WORKERS)
 
     print(f"每张 GPU 可运行任务数: {max_tasks_per_gpu}")
     print(f"总并行任务数: {total_max_workers}")
